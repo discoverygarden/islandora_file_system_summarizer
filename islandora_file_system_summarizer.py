@@ -15,9 +15,9 @@ if __name__ == '__main__':
     '''
         Entry point!
         @param string sys.argv[1]
-            directory_to_report_on
+            directory_to_report_on defaults to os.getcwd()
         @param string sys.argv[2]
-            file_name_to_write
+            file_name_to_write (not a path) defaults to 'Islandora_report.csv'
     '''
     
     if len(sys.argv) == 2:
