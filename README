@@ -1,0 +1,29 @@
+islandora_file_system_summarizer
+
+This application will create a summary of a directory as usable by IslandoraPYUtils ingester.
+It is meant to be used with py2exe.
+
+
+TO BUILD using py2exe:
+
+On Windows 7 install Python 2.7 (32bit, manually put on path, put the scripts folder too), setup tools, 
+install py2exe, using msi's.  Install PIP. Install mingw32. Add C:\MinGW\bin; to path.
+Edit ( create if not existing ) distutils.cfg located at C:\Python27\Lib\distutils\distutils.cfg to be:
+"
+
+[build]
+compiler=mingw32
+
+
+"
+ eliminate '-mno-cygwin'n from cygwinccompyler.py in C:Python27/lib/distutils
+
+
+Run 'python setup.py py2exe'.
+
+
+ETC:
+
+I didn't get a working application out of lxml, but could install it.
+pypi.python.org/packages/2.7/l/lxml/lxml-2.2.8.win32-py2.7.exe#md5=deb95d53dbd3734ecfb4f69850758427
+
